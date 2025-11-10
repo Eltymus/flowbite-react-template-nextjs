@@ -2,6 +2,12 @@ import { Nav } from "./components/Navbar";
 import { Hero } from "./components/hero";
 import { Description } from "./components/heroDescription";
 import { Cards } from "./components/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionPanel,
+  AccordionTitle,
+} from "flowbite-react";
 import { FixTables, CodePC, Cloud } from "./icons";
 import home from "../public/text.json";
 
@@ -54,6 +60,16 @@ export default function Home() {
           altText="Imagen de sistema de gestion de mantenimiento"
         />
       </div>
+      <Accordion className="mx-8 my-8 bg-white">
+        {home.home.faq.items.map(({ question, answer }) => (
+          <AccordionPanel key={question}>
+            <AccordionTitle>{question}</AccordionTitle>
+            <AccordionContent>
+              <p className="mb-2 text-gray-700">{answer}</p>
+            </AccordionContent>
+          </AccordionPanel>
+        ))}
+      </Accordion>
     </main>
   );
 }
