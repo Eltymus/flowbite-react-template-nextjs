@@ -10,17 +10,39 @@ import { TagText } from "./tagText";
 
 export function Advantages() {
   return (
-    <div className="mx-5 my-10 grid gap-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
-      <div className="flex flex-row items-start gap-4">
-        <div className="rounded-xl bg-purple-200 p-2">
-          <TbFlag className="h-6 w-6 text-purple-800" />
-        </div>
-        <p>Reducción de costos de mantenimiento</p>
+    <div className="m-10 flex sm:flex-col md:flex-row">
+      <div className="content-center items-center pr-5 text-center">
+        <p className="m-5 text-2xl font-bold">
+          Control total del mantenimiento, en tiempo real con tablero
+          inteligente
+        </p>
+        <p className="m-5">
+          Reduce costos, minimiza paradas y gestiona tareas con integraciones y
+          trazabilidad histórica — todo desde un único tablero en tiempo real.
+        </p>
       </div>
-      <TagText
-        description="Posibilidad de integración con sistemas externos"
-        Icon={TbTopologyStar3}
-      />
+      <div className="m-5 grid gap-10 sm:grid-cols-1 md:grid-cols-2">
+        <TagText
+          description="Reducción de costos de mantenimiento"
+          Icon={TbFlag}
+        />
+        <TagText
+          description="Posibilidad de integración con sistemas externos"
+          Icon={TbTopologyStar3}
+        />
+        <TagText
+          description="Tablero de Control en tiempo real de las actividades en desarrollo y planificadas"
+          Icon={TbDeviceTablet}
+        />
+        <TagText
+          description="Trazabilidad histórica de las tareas de mantenimiento de cada equipo"
+          Icon={TbArchive}
+        />
+        <TagText
+          description="Minimización de tiempos de parada de equipos"
+          Icon={TbSettings}
+        />
+      </div>
     </div>
   );
 }
