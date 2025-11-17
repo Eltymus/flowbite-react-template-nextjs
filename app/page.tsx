@@ -4,6 +4,7 @@ import { Description } from "./components/heroDescription";
 import { Cards } from "./components/card";
 import { LogoComp } from "./components/logoComposition";
 import { Foot } from "./components/footer";
+import { Advantages } from "./components/advantages";
 import {
   Accordion,
   AccordionContent,
@@ -57,6 +58,7 @@ export default function Home() {
           altText="Imagen de sistema de gestion de mantenimiento"
         />
       </div>
+      <Advantages />
       <Accordion className="mx-8 my-8 bg-white">
         {home.home.faq.items.map(({ question, answer }) => (
           <AccordionPanel key={question}>
