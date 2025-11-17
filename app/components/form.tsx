@@ -76,6 +76,7 @@ export function FormSubmit() {
         <Chalkboard className="h-15 rounded-2xl bg-gray-100 p-2" />
         <div className="flex flex-col gap-2 rounded-3xl align-middle">
           <ToggleSwitch
+            className=""
             checked={switch1}
             label="Utilizo SAP Business One"
             onChange={setSwitch1}
@@ -86,7 +87,9 @@ export function FormSubmit() {
         </div>
       </div>
       <div className="flex justify-center">
-        <Button className="bg-amber-400 tracking-wide">Solicitar demo</Button>
+        <Button className="bg-amber-500 tracking-wide delay-150 duration-150 hover:bg-purple-500">
+          Solicitar demo
+        </Button>
       </div>
     </div>
   );
