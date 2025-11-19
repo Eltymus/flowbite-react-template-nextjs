@@ -1,0 +1,66 @@
+{
+  "home": {
+    "hero": {
+      "heading": "Mantenimiento optimizado: correctivo, preventivo y predictivo en un solo lugar.",
+      "subheading": "EAM One integra la gestión del mantenimiento con SAP Business One para que planifiques y controles tus activos con trazabilidad total y decisiones basadas en datos.",
+      "cta": "Solicitar demo"
+    },
+    "value_props": [
+      {
+        "title": "Integración con SAP Business One",
+        "text": "EAM One integra de forma nativa la gestión de mantenimiento con los procesos de abastecimiento y almacén de SAP Business One."
+      },
+      {
+        "title": "Desarrollada bajo los estándares de SAP",
+        "text": "EAM One es una aplicación web desarrollada según los estándares y recomendaciones de SAP, con un modelo de mínima intervención en el modelo funcional de cada cliente."
+      },
+      {
+        "title": "Alojado en Amazon Web Services (AWS)",
+        "text": "Los datos de la gestión de mantenimiento se almacenan en un espacio exclusivo para cada empresa usuaria en la plataforma Amazon Web Services (AWS)."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Reducción de costos de mantenimiento",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum ut est a molestie. Integer elementum diam mauris, non blandit ipsum sollicitudin eu."
+      },
+      {
+        "title": "Tablero de control en tiempo real de las actividades en curso y planificadas",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum ut est a molestie. Integer elementum diam mauris, non blandit ipsum sollicitudin eu."
+      },
+      {
+        "title": "Minimización de tiempos de parada de equipos",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vestibulum ut est a molestie. Integer elementum diam mauris, non blandit ipsum sollicitudin eu."
+      }
+    ],
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "question": "¿Es posible obtener automáticamente los valores de kilometraje de vehículos generados por sistemas de control vehicular?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "question": "¿Se requiere una licencia de SAP Business One para utilizar EAM One?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "question": "¿Es posible gestionar el mantenimiento de equipos de terceros (clientes)?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "question": "¿Cómo es la conexión de EAM One con SAP?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "question": "¿Se puede gestionar mantenimiento predictivo con EAM One?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          "question": "¿Se puede usar EAM One desde teléfono o tablet?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      ]
+    }
+  }
+}

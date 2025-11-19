@@ -16,11 +16,18 @@ import { FixTables, CodePC, Cloud } from "./icons";
 import home from "../public/text.json";
 import { motion } from "motion/react";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+import Head from "next/head";
 
 export default function Home() {
   const scrollRef = useRef(null);
+  const { t } = useTranslation("home");
   return (
     <main className="bg-linear-to-b from-amber-100 from-10% to-white to-70%">
+      <head>
+        <title>EAM One</title>
+      </head>
+
       <motion.div
         className="mx-auto max-w-7xl"
         initial={{ opacity: 0, y: 20 }}
@@ -47,18 +54,18 @@ export default function Home() {
         >
           <div className="mx-8 flex flex-col items-center justify-center md:flex-row">
             <Description
-              title={home.home.value_props[0].title}
-              description={home.home.value_props[0].text}
+              title={t("value_props.0.title")}
+              description={t("value_props.0.text")}
               Icon={FixTables}
             />
             <Description
-              title={home.home.value_props[1].title}
-              description={home.home.value_props[1].text}
+              title={t("value_props.1.title")}
+              description={t("value_props.1.text")}
               Icon={CodePC}
             />
             <Description
-              title={home.home.value_props[2].title}
-              description={home.home.value_props[2].text}
+              title={t("value_props.2.title")}
+              description={t("value_props.2.text")}
               Icon={Cloud}
             />
           </div>
@@ -71,7 +78,7 @@ export default function Home() {
           viewport={{ root: scrollRef }}
         >
           <div id="advantages">
-            <div className="mx-5 flex flex-col sm:items-center md:flex-row md:items-baseline">
+            <div className="mx-5 flex flex-col items-center md:flex-row md:items-baseline">
               <Cards
                 title={home.home.benefits[0].title}
                 description={home.home.benefits[0].text}

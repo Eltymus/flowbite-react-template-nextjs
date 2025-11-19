@@ -13,7 +13,7 @@ interface CardsProps {
 export function Cards({ picture, altText, title, description }: CardsProps) {
   return (
     <Card
-      className="m-3 h-full min-h-full max-w-sm"
+      className="m-3 max-w-sm"
       renderImage={() => (
         <Image
           width={500}
