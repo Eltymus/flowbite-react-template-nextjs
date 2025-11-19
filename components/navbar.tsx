@@ -9,7 +9,7 @@ import {
 
 export function Nav() {
   return (
-    <Navbar fluid rounded>
+    <Navbar fluid>
       <NavbarBrand href="">
         <img src="EAMONElogo.png" className="m-3 h-10" alt="EAM ONE Logo" />
       </NavbarBrand>

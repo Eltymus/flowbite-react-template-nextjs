@@ -19,8 +19,12 @@ export function Hero() {
           Solicitar demo
         </Button>
       </div>
-      <div className="w-1/2">
-        <img src="eamoneHero.png" alt="image with logo inside" />
+      <div className="hidden w-1/2 items-center justify-center md:flex">
+        <img
+          src="img_hero.png"
+          alt="image with logo inside"
+          className="w-4/5"
+        />
       </div>
     </div>
   );

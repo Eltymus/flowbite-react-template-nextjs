@@ -2,7 +2,7 @@
 
 import { Label, TextInput, ToggleSwitch } from "flowbite-react";
 import { useState } from "react";
-import { Chalkboard } from "../icons";
+import { Chalkboard } from "../pages/icons";
 import {
   FaUser,
   FaStore,
