@@ -19,12 +19,12 @@ import { motion } from "motion/react";
 export default function Home() {
   return (
     <main className="bg-linear-to-b from-amber-100 from-10% to-white to-70%">
-      <Nav />
       <div className="mx-auto max-w-7xl">
+        <Nav />
         <Hero />
         <motion.div
           animate={{ rotate: 360 }}
-          className="mx-8 flex items-center justify-center sm:flex-col md:flex-row"
+          className="mx-8 flex flex-col items-center justify-center md:flex-row"
         >
           <Description
             title={home.home.value_props[0].title}
@@ -43,7 +43,7 @@ export default function Home() {
           />
         </motion.div>
         <div id="advantages">
-          <div className="mx-5 flex sm:flex-col sm:items-center md:flex-row md:items-baseline">
+          <div className="mx-5 flex flex-col sm:items-center md:flex-row md:items-baseline">
             <Cards
               title={home.home.benefits[0].title}
               description={home.home.benefits[0].text}
@@ -79,7 +79,7 @@ export default function Home() {
           </Accordion>
         </div>
 
-        <div id="contact" className="flex sm:flex-col md:flex-row">
+        <div id="contact" className="flex flex-col md:flex-row">
           <LogoComp />
           <FormSubmit />
         </div>

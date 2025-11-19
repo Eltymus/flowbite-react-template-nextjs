@@ -10,7 +10,7 @@ import { TagText } from "./tagText";
 
 export function Advantages() {
   return (
-    <div className="m-10 flex sm:flex-col md:flex-row">
+    <div className="m-10 flex flex-col md:flex-row">
       <div className="content-center items-center pr-5 text-center">
         <p className="m-5 text-2xl font-bold">
           Control total del mantenimiento, en tiempo real con tablero
