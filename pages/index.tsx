@@ -24,9 +24,67 @@ export default function Home() {
   const { t } = useTranslation("home");
   return (
     <main className="bg-linear-to-b from-amber-100 from-10% to-white to-70%">
-      <head>
+      <Head>
         <title>EAM One</title>
-      </head>
+        <meta
+          name="description"
+          content="EAM One integra la gestione della manutenzione con SAP Business One per pianificare e controllare gli asset con tracciabilità completa e decisioni basate sui dati."
+        />
+        <meta
+          name="keywords"
+          content="EAM, manutenzione predittiva, manutenzione preventiva, manutenzione correttiva, SAP Business One, asset management, CMMS, AWS"
+        />
+        <meta
+          name="robots"
+          content="index, follow, max-snippet:250, max-image-preview:large"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0b2447" />
+
+        {/* Open Graph (solo dati certi dal JSON) */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="EAM One — Optimized maintenance integrated with SAP Business One"
+        />
+        <meta
+          property="og:description"
+          content="EAM One integra la manutenzione correttiva, preventiva e predittiva con SAP Business One, con tracciabilità completa e dashboard in tempo reale."
+        />
+        <meta property="og:site_name" content="EAM One" />
+
+        {/* Twitter card (senza handle o image poiché non forniti) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="EAM One — Optimized maintenance integrated with SAP Business One"
+        />
+        <meta
+          name="twitter:description"
+          content="Gestione manutenzione integrata con SAP Business One: funzioni correttive, preventive e predittive con tracciabilità e dashboard in tempo reale."
+        />
+
+        {/* Favicon standard (file locale presunto: /favicon.ico) */}
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Structured Data (JSON-LD) — solo campi certi dal JSON */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "EAM One",
+              alternateName: "EAM One CMMS",
+              description:
+                "EAM One integra la gestione della manutenzione (correttiva, preventiva e predittiva) con SAP Business One, fornendo tracciabilità completa e dashboard in tempo reale.",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              inLanguage: "en",
+            }),
+          }}
+        />
+      </Head>
 
       <motion.div
         className="mx-auto max-w-7xl"
