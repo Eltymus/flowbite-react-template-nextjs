@@ -112,10 +112,66 @@ const customTheme = createTheme({
 
 export function FormSubmit() {
   const [switch1, setSwitch1] = useState(false);
+  const [formData, setFormData] = useState({
+    nombre: "",
+    empresa: "",
+    cargo: "",
+    email: "",
+    numero: "",
+  });
+
+  // Gestione dei cambiamenti nei campi di input
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id.toLowerCase()]: e.target.value,
+    });
+  };
+
+  // Funzione per l'invio del form
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Impedisce il ricaricamento della pagina
+
+    // Crea un oggetto FormData per inviare i dati al PHP
+    const dataToSend = new FormData();
+    for (const key in formData) {
+      dataToSend.append(key, formData[key]);
+    }
+    // Aggiungi lo stato dello switch
+    dataToSend.append("sap", switch1 ? "on" : "off");
+
+    // URL del tuo file PHP sul server
+    const phpUrl = "https://tuodominio.com/send_mail.php";
+
+    try {
+      const response = await fetch(phpUrl, {
+        method: "POST",
+        body: dataToSend, // Invio dei dati come FormData
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.status === "success") {
+        alert("Richiesta inviata con successo!");
+        // Opzionale: pulisci il form qui
+      } else {
+        alert("Errore nell'invio della richiesta: " + result.message);
+      }
+    } catch (error) {
+      console.error("Errore di rete o invio:", error);
+      alert("Si è verificato un errore durante l'invio.");
+    }
+  };
+
   return (
     <ThemeProvider theme={customTheme}>
-      <div className="sm:w1/2 m-10 items-center justify-center md:w-full">
+      <form
+        onSubmit={handleSubmit}
+        className="sm:w1/2 m-10 items-center justify-center md:w-full"
+      >
         <p className="text-xl font-bold">Solicita una demostracion</p>
+
+        {/* Campo: Nombre y apellido */}
         <div className="my-4">
           <div className="mb-2 block">
             <Label htmlFor="Nombre">Nombre y apellido</Label>
@@ -125,8 +181,12 @@ export function FormSubmit() {
             placeholder="Nombre y apellido"
             addon={<FaUser />}
             required
+            onChange={handleChange}
+            value={formData.nombre}
           />
         </div>
+
+        {/* Campo: Empresa */}
         <div className="my-4">
           <div className="mb-2 block">
             <Label htmlFor="Empresa">Empresa</Label>
@@ -136,8 +196,12 @@ export function FormSubmit() {
             placeholder="Empresa"
             addon={<FaStore />}
             required
+            onChange={handleChange}
+            value={formData.empresa}
           />
         </div>
+
+        {/* Campo: Cargo */}
         <div className="my-4">
           <div className="mb-2 block">
             <Label htmlFor="Cargo">Cargo</Label>
@@ -147,8 +211,12 @@ export function FormSubmit() {
             placeholder="Cargo"
             addon={<FaAddressCard />}
             required
+            onChange={handleChange}
+            value={formData.cargo}
           />
         </div>
+
+        {/* Campo: Email */}
         <div className="my-4">
           <div className="mb-2 block">
             <Label htmlFor="Email">Email</Label>
@@ -156,10 +224,15 @@ export function FormSubmit() {
           <TextInput
             id="Email"
             placeholder="Email"
+            type="email" // Aggiungi il tipo corretto
             addon={<FaEnvelope />}
             required
+            onChange={handleChange}
+            value={formData.email}
           />
         </div>
+
+        {/* Campo: Numero de telefono */}
         <div className="my-4">
           <div className="mb-2 block">
             <Label htmlFor="Numero">Numero de telefono</Label>
@@ -168,9 +241,12 @@ export function FormSubmit() {
             id="Numero"
             placeholder="Numero de telefono"
             addon={<FaPhoneAlt />}
+            onChange={handleChange}
+            value={formData.numero}
           />
         </div>
 
+        {/* Toggle Switch */}
         <div className="my-3 flex flex-row justify-center gap-10 rounded-2xl border border-gray-200 bg-white p-3 align-middle">
           <Chalkboard className="h-15 rounded-2xl bg-gray-100 p-2" />
           <div className="flex flex-col gap-2 rounded-3xl align-middle">
@@ -185,12 +261,17 @@ export function FormSubmit() {
             </p>
           </div>
         </div>
+
+        {/* Bottone di Invio */}
         <div className="flex justify-center">
-          <Button className="bg-amber-500 tracking-wide delay-150 duration-150 hover:bg-purple-500">
+          <Button
+            type="submit"
+            className="bg-amber-500 tracking-wide delay-150 duration-150 hover:bg-purple-500"
+          >
             Solicitar demo
           </Button>
         </div>
-      </div>
+      </form>
     </ThemeProvider>
   );
 }
