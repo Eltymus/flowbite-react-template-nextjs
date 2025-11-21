@@ -152,6 +152,7 @@ export function FormSubmit() {
           </div>
         ))}
 
+        {/* Toggle Switch */}
         <div className="my-3 flex flex-row justify-center gap-10 rounded-2xl border border-gray-200 bg-white p-3 align-middle">
           <Chalkboard className="h-15 rounded-2xl bg-gray-100 p-2" />
           <div className="flex flex-col gap-2 rounded-3xl align-middle">
@@ -164,10 +165,12 @@ export function FormSubmit() {
             <p className="text-gray-500">{useSapSwitch.description}</p>
           </div>
         </div>
+
+        {/* Bottone di Invio */}
         <div className="flex justify-center">
           <Button className={submitBtn.className}>{submitBtn.label}</Button>
         </div>
-      </div>
+      </form>
     </ThemeProvider>
   );
 }
